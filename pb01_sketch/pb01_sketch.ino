@@ -1,5 +1,15 @@
-/*
+/***************************************************
 
+  // Libraries
+
+***************************************************/
+
+#include <WiFiClientSecure.h>
+#include <ESP8266WiFi.h>
+#include <ArduinoJson.h>
+
+/**************************************************
+  
   Pantri PB01 a.k.a:
 
   --- A Bit Pushy ---
@@ -35,9 +45,9 @@ const char* objectID = "";      //  This is the objectID issued to your device (
 //  This section defines pins that link your Adafruit Arduino Huzzah ESP8266 Feather board to your button, buzzer & LED.
 
 int buzzer = 14;          // This is the pin output leading to your Buzzer
-int LED = 15;             // This is the pin output leading to your LED
-int successLED = 12;      // This is the pin output leading to your LED
-int alertLED = 13;        // This is the pin output leading to the red alert LED
+int LED = 13;             // This is the pin output leading to your LED
+int successLED = 15;      // This is the pin output leading to your LED
+int alertLED = 12;        // This is the pin output leading to the red alert LED
 
 /***************************************************
 

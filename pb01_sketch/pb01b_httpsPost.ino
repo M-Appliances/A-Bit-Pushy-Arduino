@@ -1,5 +1,4 @@
 //ALPHA RELEASE V 0.3.1
-
 template <class T> void sendWithDebug(T dataToSend, WiFiClientSecure& client); // function prototype
 bool checkHTTPstatusOK(WiFiClientSecure& client);
 
@@ -21,9 +20,9 @@ char objectIDstr[11];     // + objectID        (4 294 967 295 + null)
 const char* body_2 =         "\"},\"MAC_Address\":\"";
 char MACstr[17 + 1];      // + MACstr          (6 hexadecimal bytes + 5 colons + null)
 const char* body_3 =         "\"}";
-//const char* objectID = "[Insert ojectId]";
 
 size_t fixedBodyLength;
+
 bool httpsPost() {
   uint8_t MAC[6];
   WiFi.macAddress(MAC);
@@ -80,7 +79,6 @@ bool httpsPost() {
   client.stop(); // Close the connection
 
   return HTTPstatusOK;
-
 }
 
 template <class T> void sendWithDebug(T dataToSend, WiFiClientSecure& client) {
@@ -92,6 +90,7 @@ template <class T> void sendWithDebug(T dataToSend, WiFiClientSecure& client) {
    Check the server's response and check the HTTP status code to see if the request was successful.
    Returns true on success.
 */
+
 bool checkHTTPstatusOK(WiFiClientSecure& client) {
   unsigned long timeout = millis();
 
@@ -103,6 +102,7 @@ bool checkHTTPstatusOK(WiFiClientSecure& client) {
     }
     // if the space doesn't arrive within 5 seconds, timeout and return
     if (millis() - timeout > 5000) {
+      Serial.println("");
       Serial.println("Error: Client Timeout!  There might be an issue with the Pantri Server...");
 
       alertSlow();
@@ -129,6 +129,7 @@ bool checkHTTPstatusOK(WiFiClientSecure& client) {
   statusCodeStr[3] = '\0';  // add terminating null character, needed for strcmp()
 
   String payload = client.readStringUntil('\n');  // Get the response
+  Serial.println("");
   Serial.println("***RETURN PAYLOAD***");
   Serial.println(payload);
   Serial.println("********************");
@@ -197,10 +198,10 @@ bool checkHTTPstatusOK(WiFiClientSecure& client) {
     return false;
   }
   return true;
-}
+};
 
 /*
 
-   A Huge thankyou to PieterP on the arduino.cc forum for assisting in getting this working - http://forum.arduino.cc/index.php?topic=497048.msg3393151#msg3393151
+   A Huge thankyou to PieterP on http://forum.arduino.cc for assisting in getting this working - http://forum.arduino.cc/index.php?topic=497048.msg3393151#msg3393151
 
 */

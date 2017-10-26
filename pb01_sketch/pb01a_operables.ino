@@ -5,16 +5,6 @@
 
 /***************************************************
 
-  // Libraries
-
-***************************************************/
-
-#include <WiFiClientSecure.h>
-#include <ESP8266WiFi.h>
-#include <ArduinoJson.h>
-
-/***************************************************
-
   // Definitions
 
 ***************************************************/
@@ -93,9 +83,6 @@ digitalWrite(alertLED, LOW);
 delay (250);
 
 }
-
-
-
 
 void workingFastSilent() {
 digitalWrite(LED, HIGH);

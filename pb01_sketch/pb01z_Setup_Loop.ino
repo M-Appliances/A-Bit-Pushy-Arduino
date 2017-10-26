@@ -6,13 +6,10 @@ void setup() {
   pinMode(LED, OUTPUT);
   pinMode(successLED, OUTPUT);
   pinMode(alertLED, OUTPUT);
-
   Serial.begin(115200);
   Serial.println(" ");
   Serial.println("Checking my battery...");
- 
   battery_level();
-
   connectToWifi();
   workingSlowSilent();
   Serial.println("Night!");
@@ -22,4 +19,4 @@ void setup() {
 
 void loop() {
 
-}
+};
