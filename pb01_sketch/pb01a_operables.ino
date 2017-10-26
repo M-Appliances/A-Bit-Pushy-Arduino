@@ -28,7 +28,14 @@ int errorButtonCount;
   // Global Functions
 
 ***************************************************/
-
+/*
+void validateDeviceParameters(ssid, password, objectID) {
+  if (ssid == "") {
+        alertSlow();
+        Serial.println("No Data In SSID field.  Please Gimme some!"); 
+  }
+}
+*/
 void workingFast() {
 digitalWrite(LED, HIGH);
 digitalWrite(buzzer, HIGH);
