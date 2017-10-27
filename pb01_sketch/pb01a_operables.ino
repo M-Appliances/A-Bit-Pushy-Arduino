@@ -1,7 +1,16 @@
-//ALPHA RELEASE V 0.3.1
+//ALPHA RELEASE V 0.1.1
 
 // Do not alter anything within this TAB (unless you want to)!
 
+
+/***************************************************
+
+  // Libraries
+
+***************************************************/
+
+#include <ESP8266HTTPClient.h>
+#include <ESP8266WiFi.h>
 
 /***************************************************
 
@@ -28,109 +37,146 @@ int errorButtonCount;
   // Global Functions
 
 ***************************************************/
-/*
-void validateDeviceParameters(ssid, password, objectID) {
-  if (ssid == "") {
-        alertSlow();
-        Serial.println("No Data In SSID field.  Please Gimme some!"); 
+
+void Flash() {
+  digitalWrite(LED, HIGH);
+  digitalWrite(buzzer, HIGH);
+  delay (100);
+  digitalWrite(LED, LOW);
+  digitalWrite(buzzer, LOW);
+  delay (100);
+}
+void FlashLong() {
+  digitalWrite(alertLED, HIGH);
+  digitalWrite(buzzer, HIGH);
+  delay (800);
+  digitalWrite(alertLED, LOW);
+  digitalWrite(buzzer, LOW);
+  delay (200);
+}
+void errorFlash() {
+  digitalWrite(buzzer, HIGH);
+  delay (50);
+  digitalWrite(buzzer, LOW);
+  delay (50);
+}
+
+// use the ssid and password to connect to the customer's WiFi
+void connectToWifi() {
+  Serial.print("Connecting to ");
+  Serial.println(ssid);
+
+  // Disable AP_SSID publication in Client mode
+  WiFi.mode(WIFI_STA);
+
+  // Starts WiFi Connection
+  WiFi.begin(ssid, password);
+
+  connectionCount = 30;
+  Serial.println("");
+
+  Serial.println("Connection timeout in: ");
+
+  // loop to check if connected to the wi fi network
+  while (WiFi.status() != WL_CONNECTED && connectionCount > 0) {
+    delay(450);
+    digitalWrite(LED, HIGH);
+    digitalWrite(buzzer, HIGH);
+    delay(50);
+    digitalWrite(LED, LOW);
+    digitalWrite(buzzer, LOW);
+    connectionCount--;
+    Serial.print(connectionCount);
+    Serial.print(" Current WiFi Status = ");
+    Serial.print(WiFi.status());
+    Serial.println(", ");
+  }
+
+  // we're connected to the wi fi network
+  if (WiFi.status() == WL_CONNECTED) {
+
+    Serial.println("");
+    Serial.println("WiFi connected");
+    Serial.println("IP address: ");
+    Serial.println(WiFi.localIP());
+    Serial.println("Setup Complete");
+
+    digitalWrite(LED, HIGH);
+    digitalWrite(buzzer, HIGH);
+    delay(750);
+    digitalWrite(LED, LOW);
+    digitalWrite(buzzer, LOW);
+  }
+  else { // else we never connected to the network, inform the user of the error using the buzzer and LED
+
+    Serial.println("");
+    Serial.println("Not Connected To WiFi");
+    timeoutAlertCount = 0;
+
+    while (timeoutAlertCount <= 3) {
+
+      digitalWrite(alertLED, HIGH);
+      digitalWrite(buzzer, HIGH);
+      delay(750);
+      digitalWrite(buzzer, LOW);
+      delay(1000);
+      digitalWrite(alertLED, LOW);
+      timeoutAlertCount++;
+    }
   }
 }
-*/
-void workingFast() {
-digitalWrite(LED, HIGH);
-digitalWrite(buzzer, HIGH);
-delay (50);
-digitalWrite(buzzer, LOW);
-digitalWrite(LED, LOW);
-delay (50);
+
+void connectToWifiSilent() {
+
+  Serial.print("Connecting to ");
+  Serial.println(ssid);
+  // Disconnects from previous WiFi session
+  WiFi.disconnect();
+  // Disable AP_SSID publication in Client mode
+  WiFi.mode(WIFI_STA);
+  // Starts WiFi Connection
+  WiFi.begin(ssid, password);
+  connectionCount = 30;
+  Serial.println("");
+  Serial.println("Connection timeout in: ");
+  while (WiFi.status() != WL_CONNECTED && connectionCount > 0) {
+    delay(450);
+    digitalWrite(LED, HIGH);
+    delay(50);
+    digitalWrite(LED, LOW);
+    connectionCount--;
+    Serial.print(connectionCount);
+    Serial.print(" Current WiFi Status = ");
+    Serial.print(WiFi.status());
+    Serial.println(", ");
+  }
+
+  if (WiFi.status() == WL_CONNECTED) {
+
+    Serial.println("");
+    Serial.println("WiFi connected");
+    Serial.println("IP address: ");
+    Serial.println(WiFi.localIP());
+    Serial.println("Setup Complete");
+    digitalWrite(LED, HIGH);
+    delay(750);
+    digitalWrite(LED, LOW);
+
+  }
+  else {
+
+    Serial.println("");
+    Serial.println("Not Connected To WiFi");
+    timeoutAlertCount = 0;
+
+    digitalWrite(alertLED, HIGH);
+    delay(3000);
+    digitalWrite(alertLED, LOW);
+
+  }
 }
 
-void successFast() {
-digitalWrite(successLED, HIGH);
-digitalWrite(buzzer, HIGH);
-delay (50);
-digitalWrite(buzzer, LOW);
-digitalWrite(successLED, LOW);
-delay (50);
-}
-
-void alertFast() {
-digitalWrite(alertLED, HIGH);
-digitalWrite(buzzer, HIGH);
-delay (50);
-digitalWrite(buzzer, LOW);
-digitalWrite(alertLED, LOW);
-delay (50);
-}
-
-void workingSlow() {
-digitalWrite(LED, HIGH);
-digitalWrite(buzzer, HIGH);
-delay (250);
-digitalWrite(buzzer, LOW);
-digitalWrite(LED, LOW);
-delay (250);
-}
-
-void successSlow() {
-digitalWrite(successLED, HIGH);
-digitalWrite(buzzer, HIGH);
-delay (250);
-digitalWrite(buzzer, LOW);
-digitalWrite(successLED, LOW);
-delay (250);
-}
-
-void alertSlow() {
-digitalWrite(alertLED, HIGH);
-digitalWrite(buzzer, HIGH);
-delay (250);
-digitalWrite(buzzer, LOW);
-digitalWrite(alertLED, LOW);
-delay (250);
-
-}
-
-void workingFastSilent() {
-digitalWrite(LED, HIGH);
-delay (75);
-digitalWrite(LED, LOW);
-delay (25);
-}
-
-void successFastSilent() {
-digitalWrite(successLED, HIGH);
-delay (75);
-digitalWrite(successLED, LOW);
-delay (25);
-}
-
-void alertFastSilent() {
-digitalWrite(alertLED, HIGH);
-delay (75);
-digitalWrite(alertLED, LOW);
-delay (25);
-}
-
-void workingSlowSilent() {
-digitalWrite(LED, HIGH);
-delay (400);
-digitalWrite(LED, LOW);
-delay (100);
-}
-
-void successSlowSilent() {
-digitalWrite(successLED, HIGH);
-digitalWrite(buzzer, HIGH);
-delay (400);
-digitalWrite(successLED, LOW);
-delay (100);
-}
-
-void alertSlowSilent() {
-digitalWrite(alertLED, HIGH);
-digitalWrite(buzzer, HIGH);
-delay (400);
-digitalWrite(alertLED, LOW);
-delay (100);
+void myMacAddress() {
+  Serial.print("MAC address from WiFi.macAddress() is: ");
+  Serial.println(WiFi.macAddress());
 }
