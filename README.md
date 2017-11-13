@@ -1,46 +1,55 @@
 # A-Bit-Pushy
 *AKA the PB01*
 
-This is the first Pantri device.  How cool is that eh?!
+This repo contains the code for the first Pantri device.  How cool is that eh?!
 
-Whats it do?
+If you want to find out exactly what its about, then take a look here:
 
-...well, nothing until you've built it.  Once you have put everything together, then you'll end up with a swanky push button that you can press to connect to the Pantri service.
+[https://www.hackster.io/pantri/a-bit-pushy-6e7222](https://www.hackster.io/pantri/a-bit-pushy-6e7222)
 
-Once there you can do loads of cool stuff with groceries automatically.  Visit [pantri.net](http://pantri.net) to find out more.
+On the above link you'll find out everything you need to know about what ***A Bit Pushy*** is all about.
 
-> The idea is that you can:
-> 
-1. get a shopping list of bits
-2. download schematic drawings
-3. build the electronic circuits
-4. download the 3D case CAD files
-5. Edit them if you like
-6. Print a case
-7. Download the Arduino code
-8. Flash it onto your Arduino
-9. Assemble it all
-10. Have a kick ass product that you put together yourself that automatically reorders grocery items for you!  MEGA!
->
-> The hope is that you'll then go off & make even cooler products that will find new cool ways to track grocery inventory usage!
-
-# Shopping List
-
-Heres the list of bits that you need to purchase to build the device:
-
-[Insert content here]
+Theres also a shopping list for you to find out how to build one & instructions.
 
 #Schematics
 
-[Insert content here]
+The latest Schematics are available within this Repo.  Mainly because we hope that you will alter, improve & iterate on our design.
 
 #3D Printed Case
 
-[Insert content here]
+You can get hold of a case for A Bit Pushy by either buying your own here:
+
+[https://www.shapeways.com/shops/pantri-devices](https://www.shapeways.com/shops/pantri-devices)
+
+Or making your own by downloading the repo here:
+
+[https://github.com/pantri/A-Bit-Pushy-Case](https://github.com/pantri/A-Bit-Pushy-Case)
+
+As with the schematics, you can download the 3D Printed Case.  Modify it as you like.  Just make sure you send us a Push if its really cool as others might want to build one like yours too. :)
 
 #Arduino Software
 
-[Insert content here]
+The software here is written in the Arduino IDE.  If you don't know what you're doing with this, we suggest you start by getting an Arduino Uno ([https://store.arduino.cc/arduino-uno-rev3](https://store.arduino.cc/arduino-uno-rev3)) & a copy of a book like this ([https://www.makershed.com/products/make-getting-started-with-arduino-3rd-edition](https://www.makershed.com/products/make-getting-started-with-arduino-3rd-edition)) - note that both of these products are widely available from a range of outlets around the globe.
+
+You don't need to be an expert to build this device, but you should be able to make an LED or two flash on a breadboard before you start getting stuck into this.
+
+The code is split up into numerous .ino files.  This is explained in more depth in the Hackster.io article, but to programme the board you need to be aware of the following:
+
+You add your personal configuration to the *pb01_sketch.ino* onlu.
+
+`const char* ssid     = "`insert your WiFi name here`";`
+
+`const char* password = "`insert your WiFi password here`";`
+
+`const char* objectID = "`insert the object ID provided when registering the device here`";`
+
+Regarding the last point, you obtain your objectID by registering the device as follows:
+
+[INSERT LINK HERE TO GETTING A DEVICE OBJECT ID]
+
+You might also want to edit the pins that the various LED's & buzzer are attached toto match your setup.
+
+Once you've done that, flash it to your Adafruit Huzzah Feather as instructed in the [Hackster.io](www.hackster.io/pantri/a-bit-pushy-6e7222) guide above & you should be in business!
 
 # Alerts
 
