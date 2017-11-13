@@ -84,6 +84,12 @@ The alerts & errors available are as follows:
 * Server Connection
 * Sleep
 
+### Test It Out
+
+We've built some sample code to test things out here: [https://github.com/pantri/A-Bit-Pushy-Output-Test](https://github.com/pantri/A-Bit-Pushy-Output-Test)
+
+Might be worth loading this to check everythings performing as it should.
+
 ## Low Battery Alert
 
 When A Bit Pushy wakes up, the first thing it will do is check its remaining battery power.  One of two alerts will be displayed:
