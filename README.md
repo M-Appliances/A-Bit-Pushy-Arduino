@@ -11,9 +11,17 @@ On the above link you'll find out everything you need to know about what ***A Bi
 
 Theres also a shopping list for you to find out how to build one & instructions.
 
+#Help You
+
+If you need any support, chat to us on [Facebook](https://www.facebook.com/groups/545153832488441/).  Note that we're only in alpha & so you'll need to be in our alpha club to join.  If you think you have something worth contributing, then ask to join by dropping us a line (contact details at [pantri.net](http://www.pantri.net)).
+
+#Help Us
+
+We're makers & we're learning all the time.  If you think we're doing something in an overly complex manner that could be improved, or we're just doing something outright wrong, then please tell us (ideally with a repo push)?  We want this to be a community.
+
 #Schematics
 
-The latest Schematics are available within this Repo.  Mainly because we hope that you will alter, improve & iterate on our design.
+The latest Schematics are available within this Repo.  Mainly because we hope that you will alter, improve & iterate on our design before pushing any improvements to us.
 
 #3D Printed Case
 
