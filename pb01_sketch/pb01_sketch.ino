@@ -14,11 +14,12 @@
 
   --- A Bit Pushy ---
 
-  ALPHA RELEASE V 0.3.1
-
-  V 0.1.1 - Working HTTP release (alpha)
-  V 0.2.1 - HTTPS Building pre deepSleep (None working)
+  ALPHA RELEASE V 1.0.0
+  
+  V 1.0.0 - REST Post description updated to match general API convention, url & certificate altered to official domain.  Numbered V1 - ready for production!
   V 0.3.1 - deepSleep HTTPS release (alpha)
+  V 0.2.1 - HTTPS Building pre deepSleep (None working)
+  V 0.1.1 - Working HTTP release (alpha)
 
   Distributed under GNU General Public License V3
 

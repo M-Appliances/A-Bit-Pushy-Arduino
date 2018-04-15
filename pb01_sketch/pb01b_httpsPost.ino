@@ -2,11 +2,11 @@
 template <class T> void sendWithDebug(T dataToSend, WiFiClientSecure& client); // function prototype
 bool checkHTTPstatusOK(WiFiClientSecure& client);
 
-#define HOST "pantri-api.herokuapp.com"  // The host name of the server (without "http://" and without any slashes)
+#define HOST "api.pantri.net"  // The host name of the server (without "http://" and without any slashes)
 #define URI "/classes/DeviceActivity/"  // The URI of the resource you wish to send the request to
 #define PORT 443  // port 443 for HTTPS
 
-#define FINGERPRINT "08 3B 71 72 02 43 6E CA ED 42 86 93 BA 7E DF 81 C4 BC 62 30"   //  This is the latest server certificate fingerprint
+#define FINGERPRINT "2D B9 AF EF 16 46 1C 55 AD 04 1F 4C 12 15 1C 75 99 76 56 18"   //  This is the latest server certificate fingerprint
 
 const char* httpHeaders =    "POST " URI " HTTP/1.1\r\n"
                              "Host: " HOST "\r\n"
@@ -17,7 +17,7 @@ const char* httpHeaders =    "POST " URI " HTTP/1.1\r\n"
 // "\r\n"
 const char* body_1 =         "{\"ReceiptBoolean\":true,\"Device\":{\"__type\":\"Pointer\",\"className\":\"Device\",\"objectId\":\"";
 char objectIDstr[11];     // + objectID        (4 294 967 295 + null)
-const char* body_2 =         "\"},\"MAC_Address\":\"";
+const char* body_2 =         "\"},\"macAddress\":\"";
 char MACstr[17 + 1];      // + MACstr          (6 hexadecimal bytes + 5 colons + null)
 const char* body_3 =         "\"}";
 
