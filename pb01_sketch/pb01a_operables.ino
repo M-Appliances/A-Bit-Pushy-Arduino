@@ -1,5 +1,3 @@
-//ALPHA RELEASE V 0.3.1
-
 // Do not alter anything within this TAB (unless you want to)!
 
 

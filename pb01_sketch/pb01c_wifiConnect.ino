@@ -1,5 +1,3 @@
-//ALPHA RELEASE V 0.3.1
-
 void wifiErrorDiag() {
   if (WiFi.status() == WL_CONNECT_FAILED) {
     Serial.println("");

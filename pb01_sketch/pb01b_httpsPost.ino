@@ -1,4 +1,3 @@
-//ALPHA RELEASE V 0.3.1
 template <class T> void sendWithDebug(T dataToSend, WiFiClientSecure& client); // function prototype
 bool checkHTTPstatusOK(WiFiClientSecure& client);
 

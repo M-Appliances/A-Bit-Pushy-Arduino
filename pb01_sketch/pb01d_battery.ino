@@ -1,5 +1,3 @@
-//ALPHA RELEASE V 0.3.1
-
 void battery_alert() {
   // Low Battery
   Serial.println("");
