@@ -5,7 +5,7 @@ bool checkHTTPstatusOK(WiFiClientSecure& client);
 #define URI "/classes/DeviceActivity/"  // The URI of the resource you wish to send the request to
 #define PORT 443  // port 443 for HTTPS
 
-#define FINGERPRINT "2D B9 AF EF 16 46 1C 55 AD 04 1F 4C 12 15 1C 75 99 76 56 18"   //  This is the latest server certificate fingerprint
+#define FINGERPRINT "7D 3A 6A E2 A5 DF B5 B0 8A 19 6C 28 43 65 C3 83 0F 8F 07 B8"   //  This is the latest server certificate fingerprint
 
 const char* httpHeaders =    "POST " URI " HTTP/1.1\r\n"
                              "Host: " HOST "\r\n"
