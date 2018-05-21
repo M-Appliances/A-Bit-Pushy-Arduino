@@ -13,7 +13,7 @@ Theres also a shopping list for you to find out how to build one & instructions.
 
 #Help You
 
-If you need any support, chat to us on [Facebook](https://www.facebook.com/groups/545153832488441/).  Note that we're only in alpha & so you'll need to be in our alpha club to join.  If you think you have something worth contributing, then ask to join by dropping us a line (contact details at [pantri.net](http://www.pantri.net)).
+If you need any support, chat to us on [Slack](https://pantri-developers.slack.com/join/shared_invite/enQtMzQ2MTQ2NjI5Mzk3LWE1NDc5OGQ1MDBhNWJhMDE5NTFjNzU1YThmOWJjZThiZGQzNjc5NWY4YWQ5YjFkNWY3NjljZGI4MmE4NTM3NmE).  Note that we're only in alpha & so you'll need to be in our alpha club to join.  If you think you have something worth contributing, then ask to join by dropping us a line (contact details at [pantri.net](http://www.pantri.net)).
 
 #Help Us
 
