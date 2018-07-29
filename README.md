@@ -1,8 +1,6 @@
 # A-Bit-Pushy
 **AKA the PB01**
 
-**_Note this branch is still under development_**
-
 This repo contains the code for the first Pantri device.  How cool is that eh?!
 
 If you want to find out exactly what its about, then take a look here:
