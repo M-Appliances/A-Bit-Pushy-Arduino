@@ -1,5 +1,5 @@
 # A Bit Pushy
-**Where it all began!**
+**This is where it all began!**
 
 This repo contains the code for our first device, 'A Bit Pushy'. A IoT based button device that connects directly to the Pantri Dashboard.
 
