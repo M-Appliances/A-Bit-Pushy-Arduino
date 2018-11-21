@@ -1,19 +1,12 @@
-# A-Bit-Pushy
-**AKA the PB01**
+# A Bit Pushy
+**Where it all began!**
 
-This repo contains the code for the first Pantri device.  How cool is that eh?!
+This repo contains the code for our first device, 'A Bit Pushy'. A IoT based button device that connects directly to the Pantri Dashboard.
 
-If you want to find out exactly what its about, then take a look here:
+If you want to know what its about, then take a look at our original hackster blog post here:
 
 [https://www.hackster.io/pantri/a-bit-pushy-6e7222](https://www.hackster.io/pantri/a-bit-pushy-6e7222)
 
-On the above link you'll find out everything you need to know about what ***A Bit Pushy*** is all about.
-
-Theres also a shopping list for you to find out how to build one & instructions.
-
-#Help You
-
-If you need any support, chat to us on [Slack](https://pantri-developers.slack.com/join/shared_invite/enQtMzQ2MTQ2NjI5Mzk3LWE1NDc5OGQ1MDBhNWJhMDE5NTFjNzU1YThmOWJjZThiZGQzNjc5NWY4YWQ5YjFkNWY3NjljZGI4MmE4NTM3NmE).  Note that we're only in alpha & so you'll need to be in our alpha club to join.  If you think you have something worth contributing, then ask to join by dropping us a line (contact details at [pantri.net](http://www.pantri.net)).
 
 #Help Us
 
@@ -21,20 +14,19 @@ We're makers & we're learning all the time.  If you think we're doing something 
 
 #Schematics
 
-The latest Schematics are available within this Repo.  Mainly because we hope that you will alter, improve & iterate on our design before pushing any improvements to us.
+The  Schematics are available in this Repo.  Mainly because we love sharing, and hope that you will alter, improve & iterate on our design!
 
 #3D Printed Case
 
-You can get hold of a case for A Bit Pushy by either buying your own here:
+You can get hold of the original case for A Bit Pushy by either buying your own here:
 
 [https://www.shapeways.com/shops/pantri-devices](https://www.shapeways.com/shops/pantri-devices)
 
 Or making your own by downloading the repo here:
 
-[https://github.com/pantri/A-Bit-Pushy-Case](https://github.com/pantri/A-Bit-Pushy-Case)
+[https://github.com/Maker-Appliances/LEGACY-BitPushy-Case](https://github.com/Maker-Appliances/LEGACY-BitPushy-Case)
 
-As with the schematics, you can download the 3D Printed Case.  Modify it as you like.  Just make sure you send us a Push if its really cool as others might want to build one like yours too. :)
-
+As with the schematics, you can download the 3D Printed Case.  Modify it as you like.  Just make sure you send us a push if its really cool as others might want to build one like yours too. :)
 #Arduino Software
 
 The software here is written in the Arduino IDE.  If you don't know what you're doing with this, we suggest you start by getting an Arduino Uno ([https://store.arduino.cc/arduino-uno-rev3](https://store.arduino.cc/arduino-uno-rev3)) & a copy of a book like this ([https://www.makershed.com/products/make-getting-started-with-arduino-3rd-edition](https://www.makershed.com/products/make-getting-started-with-arduino-3rd-edition)) - note that both of these products are widely available from a range of outlets around the globe.
