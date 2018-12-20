@@ -6,8 +6,10 @@ void setup() {
   pinMode(alertLED, OUTPUT);
   Serial.begin(115200);
   Serial.println(" ");
-  Serial.println("Checking my battery...");
-  battery_level();
+  if (batteryCheck == true) {
+    Serial.println("Checking my battery...");
+    battery_level();
+  }
   connectToWifi();
   workingSlowSilent();
   Serial.println("Night!");

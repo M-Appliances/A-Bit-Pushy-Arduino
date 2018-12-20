@@ -42,6 +42,7 @@ const char* password = "";      //  This is your wireless network password
 
 const char* objectID = "";      //  This is the objectID issued to your device (on the Pantri device dashboard)
 
+bool batteryCheck = true;      //  Set this to false if you want to disable the battery check loop
 
 
 //  This section defines pins that link your Adafruit Arduino Huzzah ESP8266 Feather board to your button, buzzer & LED.
